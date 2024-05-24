@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'Rubic One';
+  font-family: "Rubic One";
   src: url(/fonts/rubic-one.woff);
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Anonymous Pro';
+  font-family: "Anonymous Pro";
   src: url(/fonts/anonymouspro-regular.woff);
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Anonymous Pro';
+  font-family: "Anonymous Pro";
   src: url(/fonts/anonymouspro-bold.woff);
   font-weight: bold;
   font-display: swap;
@@ -30,7 +30,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Anonymous Pro', serif;
+  font-family: "Anonymous Pro", serif;
   font-size: 26px;
   max-width: 1728px;
   min-width: 365px;
@@ -39,12 +39,20 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubic One', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubic One", sans-serif;
   margin: 0;
 }
 
-ul, ol, li, p {
+ul,
+ol,
+li,
+p {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -62,7 +70,7 @@ button {
 }
 
 .button {
-  font-family: 'Rubic One', sans-serif;
+  font-family: "Rubic One", sans-serif;
   display: block;
   padding: 18px 35px;
   border: 4px solid black;
@@ -77,13 +85,16 @@ button {
 
 .button:hover {
   background-color: black;
-  color: #FFFF00;
+  color: #ffff00;
 }
 
 .main {
   overflow: hidden;
 }
 
+.main-inner {
+  padding-top: 20px;
+}
 
 @media (width <= 1728px) {
   body {
@@ -98,9 +109,5 @@ button {
 
   .button {
     font-size: 20px;
-  } 
+  }
 }
-
-
-
-

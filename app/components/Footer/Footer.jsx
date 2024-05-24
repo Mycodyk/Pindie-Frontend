@@ -1,24 +1,43 @@
-import Link from "next/link"
-import Styles from "./Footer.module.css"
+"use client";
+
+import Styles from "./Footer.module.css";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Footer = () => {
-    return(
-        <footer className={Styles["footer"]}>
-      <a href="./index.html" className={Styles["footer__logo"]}>
-        <span className={Styles["footer__logo-name"]}>pindie</span>
-        <span className={Styles["footer__logo-copy"]}>, XXI век</span>
-      </a>
+  const pathname = usePathname();
+  return (
+    <footer className={Styles["footer"]}>
+      {pathname === "/" ? (
+        <p className={Styles["footer__logo"]}>
+          <span className={Styles["footer__logo-name"]}>pindie</span>
+          <span className={Styles["footer__logo-copy"]}>, XXI век</span>
+        </p>
+      ) : (
+        <Link href="/" className={Styles["footer__logo"]}>
+          <span className={Styles["footer__logo-name"]}>pindie</span>
+          <span className={Styles["footer__logo-copy"]}>, XXI век</span>
+        </Link>
+      )}
+
       <ul className={Styles["social-list"]}>
         <li className={Styles["social-list__item"]}>
-          <Link href="" className={Styles["social-list__link"]}>YT</Link>
+          <a href="" className={`button ${Styles["social-list__link"]}`}>
+            YT
+          </a>
         </li>
         <li className={Styles["social-list__item"]}>
-          <Link href="" className={Styles["social-list__link"]}>ВК</Link>
+          <a href="" className={`button ${Styles["social-list__link"]}`}>
+            ВК
+          </a>
         </li>
         <li className={Styles["social-list__item"]}>
-          <Link href="" className={Styles["social-list__link"]}>TG</Link>
+          <a href="" className={`button ${Styles["social-list__link"]}`}>
+            TG
+          </a>
         </li>
       </ul>
     </footer>
-    )
-}
+  );
+};

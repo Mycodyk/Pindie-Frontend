@@ -26,10 +26,6 @@
   font-size: 22px;
 }
 
-.form__message {
-  margin-bottom: 20px;
-} 
-
 .form__field-input {
   width: 100%;
   border: 1px solid #000000;
@@ -37,6 +33,10 @@
   padding: 16px 24px;
   font-family: inherit;
   font-size: 22px;
+}
+
+.form__message {
+  margin-bottom: 20px;
 }
 
 .form__actions {
